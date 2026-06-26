@@ -2,8 +2,7 @@
 """Knowledge-base integrity linter for Cold Email Master.
 
 Enforces the structural invariants that ad-hoc edits keep breaking:
-  1. Every "Email N" reference resolves to an example that actually exists
-     unless it is explicitly labeled as a legacy reference.
+  1. Every "Email N" reference resolves to an active v2 example that actually exists.
   2. Example numbers are unique and the removed set is documented.
   3. {{companyName}} only appears in the designated teaching contexts,
      never as live copy.
@@ -48,10 +47,6 @@ KB_GLOBS = [
     ".claude/skills/anneal/SKILL.md",
 ]
 
-# Legacy examples live under examples/archive/legacy and are not part of the
-# current v2 standard. References to them must say "Legacy Email N".
-LEGACY_EXAMPLES = {2, 3, 4, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
-
 # Files allowed to contain {{companyName}} because they teach Claude to flag it
 # in user-submitted drafts, or describe the linter rule itself. Everywhere else
 # it is live copy and is banned.
@@ -66,9 +61,6 @@ COMPANYNAME_ALLOWED = {
 # Files where {{icebreaker}} is legitimate: the validated examples that keep it,
 # plus the docs that explain the manual-only rule.
 ICEBREAKER_ALLOWED = {
-    "examples/archive/legacy/legacy-validated-batch-01.md",
-    "examples/archive/legacy/legacy-validated-batch-02.md",
-    "examples/archive/legacy/legacy-validated-batch-03.md",
     "best-practices.md",
     "anti-patterns.md",
     "why-these-work.md",
@@ -128,7 +120,7 @@ def expand_refs(blob: str) -> set[int]:
     return nums
 
 
-REF = re.compile(r"(?<!Legacy\s)Emails?\s+((?:\d+(?:\s*[-–]\s*\d+)?(?:\s*(?:,|and|&)\s*)?)+)")
+REF = re.compile(r"Emails?\s+((?:\d+(?:\s*[-–]\s*\d+)?(?:\s*(?:,|and|&)\s*)?)+)")
 
 
 def check_references(files: list[Path], defined: dict[int, str]) -> list[str]:
@@ -143,9 +135,8 @@ def check_references(files: list[Path], defined: dict[int, str]) -> list[str]:
             for m in REF.finditer(line):
                 for n in expand_refs(m.group(1)):
                     if n not in valid:
-                        why = "legacy" if n in LEGACY_EXAMPLES else "undefined"
                         errors.append(
-                            f"ERROR {rel(path)}:{lineno}  references Email {n} ({why})"
+                            f"ERROR {rel(path)}:{lineno}  references Email {n} (undefined)"
                         )
     return errors
 
@@ -232,7 +223,6 @@ def main() -> int:
     print(f"lint_kb: {len(files)} files, "
           f"{len(defined)} examples defined "
           f"({', '.join(str(n) for n in sorted(defined))})")
-    print(f"lint_kb: legacy-only: {', '.join(str(n) for n in sorted(LEGACY_EXAMPLES))}")
     print()
 
     for line in errors:

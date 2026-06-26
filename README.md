@@ -13,9 +13,7 @@ Use the restarted v2 set first:
 - `examples/validated/`: validated v2 examples, starting at `Email 1`.
 - `examples/templates/`: reusable frameworks derived from validated structures.
 - `examples/pending-validation/`: future examples that are not approved yet.
-- `examples/archive/legacy/`: old validated batches, kept as legacy reference only.
-
-Old examples are never plain `Email N` in current guidance. Refer to them as `Legacy Email N` when needed.
+The framework ships only the active v2 examples. Older internal batches are not included.
 
 ## Core Files
 

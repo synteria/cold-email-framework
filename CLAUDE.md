@@ -31,7 +31,7 @@ These are non-negotiable. They apply to all output: generated emails, rewrites, 
 
 ### Remaster Priority
 
-The current cold-email standard is shorter and more permission-based than the archived legacy batches. Prefer emails that create one clean reply over emails that explain the whole business.
+The current cold-email standard is short and permission-based. Prefer emails that create one clean reply over emails that explain the whole business.
 
 Default shape:
 
@@ -39,7 +39,7 @@ Default shape:
 - one compact offer, reason for writing, or next asset
 - one yes/no CTA or permission CTA
 
-Use longer copy only when the proof or mechanism genuinely earns the space. Do not copy legacy examples merely because they are long.
+Use longer copy only when the proof or mechanism genuinely earns the space.
 
 Normalize source templates before generating live copy:
 
@@ -53,7 +53,7 @@ Normalize source templates before generating live copy:
 
 **Ask permission for the next asset.** A cold email can end by asking permission to send a Loom, quick look, teardown, lead magnet, write-up, or sample. This is often better than asking for a call immediately. Do not include the link in the first email; ask first.
 
-**Use v2 examples first.** New examples restart at `Email 1`. Old examples live in `examples/archive/legacy/` and should be referenced only as `Legacy Email N`. Never let old long examples define the default length or structure.
+**Use v2 examples.** Examples start at `Email 1`. Never let long-form copy define the default length or structure.
 
 **Use the template library before improvising.** For every new campaign, choose the closest template family from `examples/template-library.md`, fill it with the brief, proof, ICP, and offer, then normalize the copy against house rules. The template library is the generation source. Style rules, best practices, anti-patterns, and `why-these-work.md` are guardrails and diagnostics.
 
@@ -64,10 +64,10 @@ These are the durable, cross-niche rules (each passes the Three-Niche Test in `i
 - **Short and punchy by default.** Cold emails are not essays. Get to the point. Longer is only justified when it carries proportional value.
 - **Grounded advice.** Always tie recommendations back to specific examples or best practices. Don't give generic marketing advice.
 - **No em dashes.** Never use em dashes (--) in any output. Use commas, periods, semicolons, or restructure the sentence instead.
-- **Never lead with "AI" or "automation."** Describe what the system does and the outcome it produces. AI can be mentioned casually mid-sentence as part of the mechanism (see Legacy Email 3), but never as the headline or opener.
+- **Never lead with "AI" or "automation."** Describe what the system does and the outcome it produces. AI can be mentioned casually mid-sentence as part of the mechanism, but never as the headline or opener.
 - **No marketing language.** "Runs on autopilot," "feast-or-famine," "fill your pipeline," "scale your agency," "streamline," "supercharge" are all banned. Use plain, slightly imperfect language. Describe things the way you'd tell a friend over coffee.
-- **Don't state their pain for them.** Let proof imply the problem. "They went from 5-6 calls a month to over 30" works. "I know you're struggling with inconsistent lead flow" does not. **Exception:** specific, insight-driven pain statements work mid-email when the sender has deep credibility in that vertical (see Legacy Emails 2 and 11 in the meta-analysis). The pain must be a specific insight, not generic, and it must come after proof, never as the opener.
-- **Match confidence to proof level.** Strong proof ("driven >10M total") lets you use softer language because the proof does the heavy lifting. Weaker proof means confidence language needs to compensate. A humble tone works when it's consistent throughout the email (see Legacy Email 3). Hedging ("I'd aim to," "hopefully") only fails when it lowers perceived likelihood of achievement without compensating proof. Use the Hormozi Value Equation in `why-these-work.md` as a diagnostic lens.
+- **Don't state their pain for them.** Let proof imply the problem. "They went from 5-6 calls a month to over 30" works. "I know you're struggling with inconsistent lead flow" does not. **Exception:** specific, insight-driven pain statements work mid-email when the sender has deep credibility in that vertical. The pain must be a specific insight, not generic, and it must come after proof, never as the opener.
+- **Match confidence to proof level.** Strong proof ("driven >10M total") lets you use softer language because the proof does the heavy lifting. Weaker proof means confidence language needs to compensate. A humble tone works when it's consistent throughout the email. Hedging ("I'd aim to," "hopefully") only fails when it lowers perceived likelihood of achievement without compensating proof. Use the Hormozi Value Equation in `why-these-work.md` as a diagnostic lens.
 - **Never use the word "free" for no-cost offers.** Email services flag "free" in the context of offering something for nothing. Use "no cost," "zero cost," "wouldn't cost you anything," "I'd pay for it all myself" instead. "Feel free to" is fine because it's conversational, not transactional.
 - **Never write money with the "$" symbol.** Currency symbols trip spam filters and read like an invoice. Every validated example writes money in spoken form with no symbol: "30k/mo," "2M," "120k/year," "5M/yr," "50 bucks." Reword per-unit costs so the bare number reads naturally ("upwards of 80 a lead," not "$80"). Full rationale in `anti-patterns.md`.
 - **No AI-sounding language.** Never use AI vocabulary words (delve, crucial, pivotal, foster, garner, showcase, highlight, enhance, testament, underscore, meticulous, vibrant, seamlessly, groundbreaking, comprehensive, landscape, tapestry, interplay, bolstered, enduring, intricate, align with, quietly). Use "is" not "serves as." Don't pad lists to three items artificially. Don't cycle through synonyms for the same thing. Don't use contrastive-negation constructions that manufacture emphasis with a negated strawman ("not only X but also Y," "it's not X, it's Y," and the disguised trailing form "X, not Y" as in "off the label, not off the marketing"); if deleting the negated half loses no information, cut it. Don't tack "-ing" analysis phrases onto sentences. See the full AI voice section in `anti-patterns.md`.
@@ -93,7 +93,7 @@ These are the durable, cross-niche rules (each passes the Three-Niche Test in `i
 - **Opener must lead with the compliment, not the research mention, for plausible deniability.** Same principle as subject lines (BP #11): the recipient should briefly wonder "do I know this person?" before realising it's cold outreach. That pause buys engagement. Patterns like "came across {{shortCompany}} and figured I'd reach out," "was reading about {{shortCompany}}," or "stumbled across your site" have zero deniability because you can only "come across" or "read about" something you don't already know. They signal scraped data the moment they land. Lead with the compliment ("love what you're doing at {{shortCompany}}" / "really like what you've got going at {{shortCompany}}" / "love the look of {{shortCompany}}" / "huge fan of the work at {{shortCompany}}") so the email could plausibly be from a customer, fan, or peer. Any research mention ("was checking you guys out on google") comes AFTER the compliment, softened, never as the lead. Rotate opener phrasings across the variants in a campaign so the three reads don't look identical. Skip the warmth opener only when the wedge itself is so strong that any pre-amble would dilute it (rare).
 - **Don't tack "this week," "today," "tomorrow" onto sample-ship CTAs.** Fake urgency. Time references are for booking specific calls (Best Practice #15), not for "I'll send a sample" closes where they read pushy. Default close for sample / no-cost-shipment offers: "Feel free to send over an address and I'll get one out." Or "Drop me a shipping address and I'll send one over." No urgency tacked on.
 - **Hedge implicit certainty claims with "probably" / "if" / "might" where they apply.** Stating hard certainty about the prospect's specific situation when you have no insight into it reads as a script. "Re-ordering probably goes on your existing delivery" reads as a real human writing honestly; drop the "probably" and it reads as a sales rep overclaiming. The hedge costs nothing and adds credibility. (Full examples in `anti-patterns.md`.)
-- **Don't open a sentence with bare "[BRAND] is..." / "[BRAND] does..." / "[BRAND] has..."** Reads too forward, like a pitch-deck slide dropped into prose. Soften the first brand mention with a connective: **"I run trade for [BRAND], [description]"** (validated, see Legacy Email 14: "I run {{yourCompany}}, the UK's...") or **"Thought you might want to hear about [BRAND], [description]"** (volunteer-frame, not present-frame). After the first softened mention, use pronouns ("we're," "our cans," "we sit on") rather than re-naming the brand. The connective lets the brand land as something the sender is flagging in passing rather than pitching.
+- **Don't open a sentence with bare "[BRAND] is..." / "[BRAND] does..." / "[BRAND] has..."** Reads too forward, like a pitch-deck slide dropped into prose. Soften the first brand mention with a connective: **"I run trade for [BRAND], [description]"** or **"Thought you might want to hear about [BRAND], [description]"** (volunteer-frame, not present-frame). After the first softened mention, use pronouns ("we're," "our cans," "we sit on") rather than re-naming the brand. The connective lets the brand land as something the sender is flagging in passing rather than pitching.
 - **Cut consulting / sales-template vocabulary.** All of these read as agency-deck filler, not a peer talking. Banned, with the fix:
   - `ops` for `operators` / `operations`: use the full word (`co-op` the legal entity is fine).
   - `on the [X] side` / `on the [X] piece`: use "I work around [X]," "I help with [X]," "I run [X]," or drop the area framing.
@@ -146,8 +146,6 @@ cold-email-framework/
       v2-frameworks.md               # Reusable v2 frameworks
     pending-validation/
       intake-template.md             # Future batch intake format
-    archive/
-      legacy/                        # Archived legacy examples
   instantly/
     __init__.py                      # Package exports
     client.py                        # Instantly API v2 HTTP client

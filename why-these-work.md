@@ -2,7 +2,7 @@
 
 This document explains the restarted v2 validated standard.
 
-The v2 examples live in `examples/validated/`. Old examples live in `examples/archive/legacy/` and should be referenced only as `Legacy Email N`.
+The v2 examples live in `examples/validated/`.
 
 ## Remaster Thesis
 
@@ -14,17 +14,17 @@ The payload moves into the next asset: a Loom, quick look, write-up, teardown-st
 
 Short is not the same as thin. A short email works only when the offer, observation, proof cue, or lead magnet is strong enough to carry the weight.
 
-## What Changed From Legacy
+## What Changed
 
-The legacy default often used 150 to 250+ word bodies with stacked proof, mechanism, risk reversal, and a detailed CTA.
+The older default often used 150 to 250+ word bodies with stacked proof, mechanism, risk reversal, and a detailed CTA.
 
 The v2 default is 1 to 5 lines, one clean wedge, and one question.
 
-The legacy default often explained the whole system.
+The older default often explained the whole system.
 
 The v2 default asks permission to send the next asset.
 
-The legacy default over-weighted founder backstory and long proof blocks.
+The older default over-weighted founder backstory and long proof blocks.
 
 The v2 standard makes the first line do more work: peer pain cue, relevant touchpoint, short proof, personalized line, observed issue, or market insight.
 

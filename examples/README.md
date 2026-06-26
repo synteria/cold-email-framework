@@ -2,7 +2,7 @@
 
 The active copy standard is the restarted v2 validated set.
 
-V2 examples are shorter, sharper, and more permission-based than the old batches. They are not short for the sake of being short. The offer, observed issue, or lead magnet has to carry the weight.
+V2 examples are shorter, sharper, and more permission-based. They are not short for the sake of being short. The offer, observed issue, or lead magnet has to carry the weight.
 
 ## Template Library v2
 
@@ -10,7 +10,7 @@ V2 examples are shorter, sharper, and more permission-based than the old batches
 
 When generating copy, pick a template family first, then fill and normalize it. The filled-in examples are reference applications, not the whole template set.
 
-The old validated batches remain archived reference material. They should not be treated as the default generation shape, especially where they are longer than the new standard.
+The framework includes only the active v2 set.
 
 ## Folder Map
 
@@ -18,13 +18,10 @@ The old validated batches remain archived reference material. They should not be
 - `validated/`: current v2 validated examples, starting at `Email 1`.
 - `templates/`: reusable frameworks derived from validated structures.
 - `pending-validation/`: promising future examples that are not approved yet.
-- `archive/legacy/`: old validated batches, kept for reference only.
 
 ## Numbering Rule
 
-New examples restart at `Email 1`.
-
-Old examples are referenced only as `Legacy Email N`. Do not cite archived examples as plain `Email N` in current rules or generation guidance.
+Examples start at `Email 1`.
 
 ## Current V2 Index
 
@@ -40,7 +37,6 @@ Old examples are referenced only as `Legacy Email N`. Do not cite archived examp
 - `validated-v2`: approved for the restarted house standard.
 - `template-from-validated-structure`: framework derived from a validated example.
 - `pending validation`: not approved yet.
-- `legacy reference`: old batches kept for context, not the current standard.
 
 ## How Examples Are Used
 
@@ -56,4 +52,4 @@ Use `examples/templates/v2-frameworks.md` to rotate structures:
 - relevant touchpoint plus observed issue
 - unique market insight
 
-Archive examples can still teach useful copy principles, but they should not control default length or structure.
+Future examples should be added to `validated/` only after they match the v2 standard.

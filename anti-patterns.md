@@ -8,7 +8,7 @@ This guide captures common mistakes that violate the best practices and validate
 
 ## V2 Failure Modes
 
-The current house standard starts from `examples/validated/`, with archived batches referenced only as `Legacy Email N`.
+The current house standard starts from `examples/validated/`.
 
 ### Trying to close the whole sale in Email 1
 
@@ -22,16 +22,16 @@ The current house standard starts from `examples/validated/`, with archived batc
 
 **Do instead:** Ask a clean relevance question, or ask permission to send the next useful asset.
 
-### Treating archived legacy examples as the current standard
+### Treating older long-form copy as the current standard
 
 **Avoid:**
 - copying the old 150 to 250+ word structure by default
-- citing old examples as plain `Email N` after the v2 restart
+- citing old example numbers after the v2 restart
 - letting old count claims shape new generation
 
 **Why it fails:** It keeps the repo anchored to the bloated standard the remaster is meant to replace.
 
-**Do instead:** Archive old examples as `Legacy Email N` and use the restarted v2 examples first.
+**Do instead:** Use the restarted v2 examples first.
 
 ### Weak offer in a one-liner
 
@@ -114,7 +114,7 @@ The current house standard starts from `examples/validated/`, with archived batc
 
 **Why it fails:** Raises red flags immediately. Sounds like every other person in their inbox pitching AI tools. It labels you before you've earned attention. The prospect files you under "AI spam" before reading the rest.
 
-**The nuance:** The validated examples DO mention AI, but only casually as part of describing how the mechanism works. Legacy Email 3: "an outreach system that uses AI to find people hiring videographers and agencies, and then pitches them." AI is buried mid-sentence inside a description of what the system actually does. It's not the headline.
+**The nuance:** The validated examples can mention AI, but only casually as part of describing how the mechanism works. AI should be buried mid-sentence inside a description of what the system actually does. It's not the headline.
 
 **Do instead:** Describe what the system does and what outcome it produces. Let the mechanism speak for itself. "I put together an outreach system that finds businesses looking for social media help, reaches out to them, and books calls on your calendar" is far better than "I built an AI outreach system for SMMA agencies."
 
@@ -153,9 +153,9 @@ The current house standard starts from `examples/validated/`, with archived batc
 
 **The nuance (important):** This isn't about always being maximally confident. Two things change the equation:
 
-1. **A humble/understated tone can work when it's consistent throughout the email.** Legacy Email 3 opens with "Am new to this" and uses "I'm fairly confident" later. The entire tone is humble, honest, exploratory. That consistency makes the humility feel authentic, not uncertain. The email commits to its tone. Don't flag this as hedging.
+1. **A humble/understated tone can work when it's consistent throughout the email.** If the entire tone is humble, honest, and exploratory, that consistency can make the humility feel authentic rather than uncertain. Don't flag this as hedging by default.
 
-2. **Softer language can work when backed by massive proof.** Legacy Email 9 says "I'd aim to get you a bunch of booked appointments for PPC" which sounds soft in isolation. But it's preceded by "I work with a ~2M/yr performance marketing firm" and "Have driven >10M in total now." The proof is so strong that the soft language reads as genuine humility, not low confidence. The social proof compensates for the hedging.
+2. **Softer language can work when backed by massive proof.** "I'd aim to..." sounds soft in isolation, but it can read as genuine humility when preceded by strong proof like "I work with a ~2M/yr performance marketing firm" and "Have driven >10M in total now." The social proof compensates for the hedging.
 
 **The test:** Does the hedging lower perceived likelihood of achievement, or does the surrounding proof compensate? If the email has ">10M driven" as proof, "I'd aim to" is fine. If the email has weak or no proof, "I'd aim to" kills it.
 
@@ -178,9 +178,9 @@ The current house standard starts from `examples/validated/`, with archived batc
 
 **Why it fails:** Whether it's a question ("Are you tired of...?") or a declaration ("I know you're struggling with..."), it feels manipulative. It assumes their problem, signals a template, and puts you in the position of telling a stranger what they feel. Everyone does this. It is the most common cold email opener and the easiest to spot.
 
-**The exception:** Specific, insight-driven pain statements work mid-email when backed by deep credibility in that vertical. Legacy Email 2 says "project management is one of the main things holding creative agencies back" after establishing 92k/month agency proof. Legacy Email 11 says "you are currently losing something like 30k/mo" after establishing a management consulting background. The key: the pain statement is a specific insight (not generic), it comes after proof (not as the opener), and the sender has earned the right to diagnose.
+**The exception:** Specific, insight-driven pain statements work mid-email when backed by deep credibility in that vertical. The key: the pain statement is a specific insight, not generic, it comes after proof, not as the opener, and the sender has earned the right to diagnose.
 
-**The test:** Direct, non-assumptive relevance checks are fine. Legacy Email 13's "Is {{companyName}} looking for writers?" works because it's a simple yes/no, not a guilt trip.
+**The test:** Direct, non-assumptive relevance checks are fine. "Is {{shortCompany}} looking for writers?" works because it's a simple yes/no, not a guilt trip.
 
 **Do instead:** Lead with credibility and the offer. Let proof imply the pain. "I set something similar up for a digital marketing agency and they went from 5-6 calls a month to over 30." The prospect fills in the pain themselves.
 
@@ -330,7 +330,7 @@ The principle from Best Practice #12 holds: follow-ups are simple human pings, b
 
 **Do instead:** Soften the first brand mention with a connective so the brand lands as something the sender is volunteering rather than presenting. Two patterns to rotate:
 
-- **"I run trade for [BRAND], [description]"** (validated, Legacy Email 14: "I run {{yourCompany}}, the UK's {{valueProp}} for skincare")
+- **"I run trade for [BRAND], [description]"**
 - **"Thought you might want to hear about [BRAND], [description]"** (volunteer-frame; the sender is offering information, not pitching)
 
 After the first softened mention, use pronouns ("we're," "our cans," "we sit on") rather than re-naming the brand. Multiple "BRAND does X. BRAND has Y. BRAND is Z" sentences stacked together is the most extreme version of this failure.
@@ -441,12 +441,12 @@ Keep it short and trust the reader to infer the upside, don't tack on an explain
 - Any opener that takes 2+ sentences to introduce your brand before getting to the recipient's situation
 - Multi-clause founder / investor / partner narratives in the opener: "Our founder Al brought Harry Kane on as a shareholder and brand partner last June, with a 2026 World Cup activation lined up"
 
-**Why it fails:** The recipient cares about themselves, not your brand. A long brand intro signals a template, pushes the value proposition past the preview pane, and reads as self-centred. Validated examples either open on the recipient (Legacy Emails 10, 11, 13, 15, 16, 18, 20, 21, 22, 23), use a brief icebreaker (Legacy Emails 2-4), or use short one-line social proof (Legacy Emails 8, 9). None open with a paragraph about themselves.
+**Why it fails:** The recipient cares about themselves, not your brand. A long brand intro signals a template, pushes the value proposition past the preview pane, and reads as self-centred. Strong cold emails either open on the recipient, use a brief icebreaker, or use short one-line social proof. They do not open with a paragraph about the sender.
 
-**The nuance:** Short brand identification is fine. Legacy Email 8 opens with "I work with a ~2M/yr performance marketing firm out in Calgary (dental-specific)." One line, one specific number, done. The failure is the multi-sentence brand spec dump, not any mention of the sender's identity.
+**The nuance:** Short brand identification is fine. "I work with a ~2M/yr performance marketing firm out in Calgary (dental-specific)" is one line, one specific number, done. The failure is the multi-sentence brand spec dump, not any mention of the sender's identity.
 
 **Do instead:** Open with one of:
-- Personalization / icebreaker (Legacy Emails 2-4 style)
+- Personalization / icebreaker
 - A recipient-pattern observation ("Most clubhouse committees stall on...")
 - A direct diagnosis ("you are losing viewers in the first 60 sec")
 - One-line social proof ("I work with a ~2M/yr performance marketing firm")
@@ -501,7 +501,7 @@ Brand identifies itself in line 2 or 3 with one sentence. Compress proof referen
 **Do instead:** Translate every feature into a specific outcome for the prospect.
 
 - Feature: "AI-powered video editing platform with auto-transcription and clip generation"
-- Outcome: "Add a few hundred bucks in perceived value for nothing, it takes no extra work" (Legacy Email 4)
+- Outcome: "Add a few hundred bucks in perceived value for nothing, it takes no extra work"
 
 The strongest framing shows what changes for them, not what your system does.
 
@@ -529,7 +529,7 @@ The strongest framing shows what changes for them, not what your system does.
 - "Limited time offer"
 - ALL CAPS anything
 
-**"Feel free to" is fine.** That usage is conversational, not transactional. "Feel free to Google me" (Legacy Email 2) is not flagged by spam filters. The problem is specifically using "free" to describe a no-cost offer.
+**"Feel free to" is fine.** That usage is conversational, not transactional. The problem is specifically using "free" to describe a no-cost offer.
 
 **Why it fails:** Hurts deliverability. Gets flagged by spam filters. Sounds spammy even when it doesn't get caught.
 

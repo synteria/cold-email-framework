@@ -17,7 +17,6 @@ Before answering, read the relevant files:
 5. `best-practices.md` (foundational principles)
 6. `anti-patterns.md` (what to avoid)
 7. `why-these-work.md` (patterns and analysis)
-8. `examples/archive/legacy/` only when you need legacy reference. Cite old examples as `Legacy Email N`.
 
 You may not need all six for every question, but read at least the most relevant ones. When in doubt, read all six.
 
