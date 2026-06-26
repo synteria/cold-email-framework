@@ -1,73 +1,59 @@
 # Email Examples
 
-Add validated cold email copy here as `.md` files.
+The active copy standard is the restarted v2 validated set.
 
-## How to Add Examples
+V2 examples are shorter, sharper, and more permission-based than the old batches. They are not short for the sake of being short. The offer, observed issue, or lead magnet has to carry the weight.
 
-1. Create a new `.md` file in this folder (e.g., `saas-outreach.md`, `agency-leads.md`, or just `batch-01.md`)
-2. Paste the email copy in
-3. Use the format below so Claude can parse them consistently
+## Template Library v2
 
-## Suggested Format
+`template-library.md` is the default generation source. It contains all 10 source templates and the 4 filled-in source examples.
 
-```markdown
-# [Descriptive Name]
+When generating copy, pick a template family first, then fill and normalize it. The filled-in examples are reference applications, not the whole template set.
 
-**Niche/Industry:** (if known)
-**Goal:** (book a call, get a reply, etc.)
+The old validated batches remain archived reference material. They should not be treated as the default generation shape, especially where they are longer than the new standard.
 
----
+## Folder Map
 
-## Email 1
+- `template-library.md`: default v2 generation source.
+- `validated/`: current v2 validated examples, starting at `Email 1`.
+- `templates/`: reusable frameworks derived from validated structures.
+- `pending-validation/`: promising future examples that are not approved yet.
+- `archive/legacy/`: old validated batches, kept for reference only.
 
-**Subject:** ...
+## Numbering Rule
 
-**Body:**
-...
+New examples restart at `Email 1`.
 
----
+Old examples are referenced only as `Legacy Email N`. Do not cite archived examples as plain `Email N` in current rules or generation guidance.
 
-## Email 2
+## Current V2 Index
 
-(repeat as needed)
-```
+| ID | Source | Status | Pattern | Niche | Offer | CTA | Length | Notes |
+| - | - | - | - | - | - | - | - | - |
+| Email 1 | revised screenshot HTML | validated-v2 | same-case opener | DTC / ecommerce | TikTok Shop growth | relevance reply | 2 to 4 lines | first touch of sequence |
+| Email 2 | revised screenshot HTML | validated-v2 | reason-I-ask follow-up | DTC / ecommerce | 75-90k monthly TikTok Shop revenue | permission to send Loom | short | second touch of sequence |
+| Email 3 | revised screenshot HTML | validated-v2 | social proof plus value CTA | agencies / social growth | Instagram growth with short-form clips | permission to send write-up | short | names deliverable directly |
+| Email 4 | revised screenshot HTML | validated-v2 | personalized first line plus result claim | agencies / content repurposing | 60 clips from 30 minutes | gauge interest | short | only use when claim is defensible |
 
-You don't have to follow this format exactly. The main thing is to separate each email clearly so they're easy to reference individually. Paste raw copy if that's easier.
+## Statuses
 
-## Niche Index
-
-Quick reference for finding examples by industry, archetype, and length.
-
-| Niche | Emails | Archetype | Length |
-|-------|--------|-----------|--------|
-| Creative agencies | 2 | A | Medium-long |
-| Videographers / video agencies | 3, 4 | A | Medium-long |
-| PPC agencies | 7, 8, 9 | B, B, B | Ultra-short, Medium-long, Short |
-| Skool community owners | 10, 15 | A, A | Medium-long |
-| Creators (YouTube/Skool) | 11, 16, 17, 19, 22 | A, A, B, A, B | Medium-long, Medium-long, Short, Medium-long, Ultra-short |
-| Agencies (general) | 18 | A | Medium-long |
-| Content/writing | 13 | B | Ultra-short |
-| Beauty/skincare wholesale | 14 | B | Short |
-| SaaS / sponsorship | 20 | B | Short |
-| Marketing companies (B2B) | 21 | A | Medium-long |
-| Podcasters | 23 | A | Medium-long |
-| Agencies / B2B (lead-magnet offer) | 24, 25 | B, B | Ultra-short, Ultra-short |
-
-**Archetype A** = Relationship-First (builds context before the offer, 150-250+ words)
-**Archetype B** = Offer-First (leads with the offer, 60-200 words)
-
-**Length key:** Ultra-short = under 80 words, Short = 80-120 words, Medium-long = 150-250+ words
-
-Emails 15-23 (batch-02) include before/after pairs. The "Before" is shown as a short gist of its failures (full originals in git history); the "After" versions are the validated examples.
-
-**Removed / non-existent example numbers:** 1, 5, 6, 12. Numbering is intentionally non-contiguous. Examples 5 and 6 were near-duplicates of Emails 3 and 2/4 (same template, different niche) and were removed to keep one canonical example per pattern; numbers 1 and 12 were never assigned. Don't go looking for them, and don't reference them in copy. `scripts/lint_kb.py` fails the build on any reference to a removed number.
-
-Emails 24-25 (batch-03) are ultra-short, lead-magnet-first variants. They carry no case studies or proof on purpose: they work when the free asset offered (a built-for-you list of 30 decision makers + personalised first emails) is strong enough to sell itself. Rotate one of these into a campaign even when you have strong case studies, the strip-it-back direct ask pulls different responders than the proof-heavy variants.
-
-## Source Provenance
-
-Batch-02 (Emails 15-21) was extracted from a ~4.5 hour cold email masterclass by Nick (runs Leftclick, previously 1SecondCopy, runs Maker School). The transcript has been fully read and integrated across `best-practices.md` (principles 16-19), `anti-patterns.md` (subject-line and offer mistakes), `why-these-work.md` (Conversion Rate Formula, Four-Step Framework, Casualization Layer, platform optimization), and these examples. No need to re-read the raw transcript: all novel insights are already in the KB.
+- `validated-v2`: approved for the restarted house standard.
+- `template-from-validated-structure`: framework derived from a validated example.
+- `pending validation`: not approved yet.
+- `legacy reference`: old batches kept for context, not the current standard.
 
 ## How Examples Are Used
 
-The skills `/review-email`, `/generate-email`, and `/strategy` all read from this folder before doing anything. Examples here are the gold standard for tone, structure, and persuasion. New copy is measured against them. See `why-these-work.md` in the project root for a breakdown of why each example works.
+The skills `/review-email`, `/generate-email`, and `/strategy` read the active v2 examples before doing copy work.
+
+Use `examples/templates/v2-frameworks.md` to rotate structures:
+
+- same-case question
+- reason-I-ask follow-up
+- lead magnet plus case study
+- one-liner front-end offer
+- direct offer plus risk reversal
+- relevant touchpoint plus observed issue
+- unique market insight
+
+Archive examples can still teach useful copy principles, but they should not control default length or structure.

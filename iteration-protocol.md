@@ -44,10 +44,10 @@ Score every delta on two axes.
 
 **Scope** decides where it can live:
 
-- **Client-specific** — only this campaign, sender, product, or vertical.
-- **Niche-class** — applies to a category (e.g. physical-product/retail, local
+- **Client-specific:** only this campaign, sender, product, or vertical.
+- **Niche-class:** applies to a category (e.g. physical-product/retail, local
   service, creator outreach) but not all cold email.
-- **Universal** — applies to all cold email.
+- **Universal:** applies to all cold email.
 
 **The Three-Niche Test** is the gate that prevents premature promotion. A delta is
 **Universal only if both hold:**
@@ -70,7 +70,7 @@ If you can't strip the client out of the sentence, it is **not** universal. Demo
 - Anti-pattern (a failure to catch)
 - New validated example (proven copy worth referencing)
 
-### 3. Route — one fact, one home
+### 3. Route: one fact, one home
 
 Each lesson goes to exactly **one** canonical location. Everywhere else links to it
 rather than restating it. Restating is how drift starts.
@@ -93,7 +93,7 @@ the **same lesson appears across 2+ unrelated clients.** Until then it stays loc
 This is the single rule that would have prevented most of the bloat: nearly every
 over-promoted rule had only ever shown up once.
 
-### 4. Check — before persisting
+### 4. Check: before persisting
 
 - **Contradiction.** Does the new rule break any validated example? If an example
   violates it, you must do one of three things, never leave both standing: change the

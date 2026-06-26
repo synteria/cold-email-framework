@@ -31,55 +31,69 @@ Before writing, classify the user's social proof into one of three tiers. This d
 **Constraints by proof tier:**
 
 - **Strong:** Any archetype, any justified length. Full creative freedom.
-- **Moderate:** Either archetype. If Archetype A, must include strong risk reversal and a give-first element. Confidence language must be calibrated; no "100% sure" or "extremely confident" without compensating proof. Humble/exploratory tone (Email 3) is a good fit here.
+- **Moderate:** Either archetype. If Archetype A, must include strong risk reversal and a give-first element. Confidence language must be calibrated; no "100% sure" or "extremely confident" without compensating proof. Humble/exploratory tone (Legacy Email 3) is a good fit here.
 - **Weak/None:** Archetype B only, under 100 words. Default to flagging: *"The proof provided is thin. These emails will have a lower performance ceiling. Consider adding specific results (numbers, outcomes, timeframes) before sending."* Do not refuse to generate, but be explicit about the limitation.
-  - **Exception, the lead-magnet shape (Emails 24-25, batch-03).** A no-proof email is not weak when a strong, ready-to-use asset does the persuading: a built-for-you deliverable the recipient can act on with one "yes" (e.g. "a list of 30 decision makers similar to [client], each with a first email written"). Here the brevity and the absence of proof are deliberate, and the email is a validated shape, not a thin one. Don't flag it as weak; instead confirm the asset is genuinely deliverable on one reply. See the Emails 24-25 analysis in `why-these-work.md`.
+  - **Exception, the v2 lead-magnet shape.** A no-proof email is not weak when a strong, ready-to-use asset does the persuading: a built-for-you deliverable the recipient can act on with one "yes." Here the brevity and the absence of proof are deliberate, and the email is a validated shape, not a thin one. Confirm the asset is genuinely deliverable on one reply. See `examples/templates/v2-frameworks.md` and `why-these-work.md`.
 
 ## Step 2: Read the Knowledge Base
 
-Before writing anything, read all six files:
+Before writing anything, read these files:
 
-1. `examples/validated-batch-01.md` (Emails 2-4, 7-11, 13, 14: study the tone, structure, pacing closely)
-2. `examples/validated-batch-02.md` (Emails 15-23: before/after rewrites showing common failures and how to fix them)
-3. `examples/validated-batch-03.md` (Emails 24-25: ultra-short lead-magnet-first variants)
-4. `best-practices.md` (foundational principles)
-5. `anti-patterns.md` (every mistake to avoid)
-6. `why-these-work.md` (understand the patterns beneath the surface)
+1. `examples/README.md` (active example map and numbering rules)
+2. `examples/template-library.md` (default v2 generation source, 10 source template families)
+3. `examples/validated/batch-01.md` (v2 validated examples, starting at Email 1)
+4. `examples/templates/v2-frameworks.md` (normalized v2 framework companion)
+5. `best-practices.md` (foundational principles)
+6. `anti-patterns.md` (every mistake to avoid)
+7. `why-these-work.md` (understand the patterns beneath the surface)
+8. `examples/archive/legacy/` only when you need legacy reference. Cite old examples as `Legacy Email N`.
 
 Do not skip this step. Do not rely on memory or general knowledge.
 
 ## Step 2.5: Apply Generation Patterns
 
-These are the highest-frequency patterns distilled from the 23 validated examples. Apply them during generation. Each rule includes its source so you can check the full context if needed.
+These are the v2 generation defaults. Apply them before reaching for archived legacy patterns.
 
-1. **CTA specificity.** If the goal is booking a call, include specific days and times: "How's 3:30pm tomorrow or noon Thursday?" (Best Practice #15; Emails 15, 18, 21, 23). If the goal is gauging interest, "Let me know" is valid and low-friction (Emails 3, 7, 9, 11, 17, 19).
+- **V2 shape first.** Prefer 1 to 5 lines when the offer, observed issue, proof cue, or lead magnet is strong enough to carry the email. The default structure is one opener, one offer or proof cue, and one permission CTA.
+
+- **Template family first.** Before drafting, choose the closest template family from `examples/template-library.md`. Fill that template with the brief, proof, ICP, and offer. Then normalize the output. Do not generate loose copy from memory when one of the 10 template families fits.
+
+- **Rotate frameworks, not just wording.** Generate variants from different shapes: same-case question, lead magnet plus case study, one-liner front-end offer, direct offer plus risk reversal, observed issue, and market insight.
+
+- **Ask permission for the next asset.** Use CTAs like "Can I send a 5-minute Loom explaining how?", "Mind if I send it?", "Worth a look?", or "Want me to send the 3 things I'd change?" Do not include the link in the first email.
+
+- **Normalize wording.** Do not generate the literal words `free` or `audit` in live cold email copy. Use specific deliverable language, or use no-cost phrasing only when cost needs to be explicit.
+
+- **Use v2 references first.** Reference `Email 1` through `Email 4` for current examples. Use `Legacy Email N` only when comparing against archived long-form patterns.
+
+1. **CTA specificity.** If the goal is booking a call, include specific days and times. If the goal is gauging interest, a short yes/no or permission CTA is preferred.
 
 2. **Proof placement.** Establish proof before or alongside the offer, never as an afterthought. In Archetype A, proof comes before the offer. In Archetype B, the offer can lead but proof must immediately follow. (`why-these-work.md` cross-email patterns: "social proof, authority, in-group signals placed before and around the offer.")
 
-3. **Scarcity when genuine.** "You were one of the first people I found when looking into it" (Email 3), "you and a Vancouver firm are one of the first people I'm reaching out to" (Email 8). Only include when it is real. Do not manufacture urgency. (7/22 validated emails use scarcity.)
+3. **Scarcity when genuine.** Legacy examples use lines like "You were one of the first people I found when looking into it" and "you and a Vancouver firm are one of the first people I'm reaching out to." Only include scarcity when it is real. Do not manufacture urgency.
 
-4. **Length matches proof.** Under 100 words for simple offers or referral asks (Emails 7, 13). 150-250 words when every paragraph earns its place with specific proof, mechanism, or risk reversal (Emails 2, 4, 8, 10, 11, 15, 18, 21). Most validated examples are 150+ words. See the proof tier constraints in Step 1.5.
+4. **Length matches proof.** V2 default is 1 to 5 lines. Use longer copy only when every paragraph earns its place with specific proof, mechanism, or risk reversal. See the proof tier constraints in Step 1.5.
 
 5. **Opener selection.** Four valid approaches. **Do not emit a `{{icebreaker}}` variable in any generated email.** The user adds icebreakers manually during review. Generate the email starting from the next line down (the "why you/why now" or first line of context). If the chosen archetype assumes a cold-read icebreaker would precede the body, write the email so it still reads naturally without one, then note in your explanation that the user can prepend an icebreaker line if they choose.
-   - **Cold-read opener (icebreaker style):** Feels personal, applies to 80%+ of target audience. (Best Practice #10; Emails 2-4) When you choose this style, write the body that would follow such an opener, but do not insert the variable yourself.
-   - **Fan/subscriber relationship:** Genuine fandom or gratitude. Only when the sender has a real connection to the prospect's work. (Emails 10-11, 16, 19)
-   - **Specific, informed compliment:** Based on real observation, not generic flattery. "Huge work on the >290k/month solo man" (Email 15), "Love your design btw" (Email 21). (8/22 validated emails)
-   - **Simple intro + strong offer:** "I found you on LinkedIn and thought I'd reach out" works when followed immediately by a specific, compelling offer. (Emails 13, 14)
+   - **Cold-read opener (icebreaker style):** Feels personal, applies to 80%+ of target audience. (Best Practice #10; Legacy Emails 2-4) When you choose this style, write the body that would follow such an opener, but do not insert the variable yourself.
+   - **Fan/subscriber relationship:** Genuine fandom or gratitude. Only when the sender has a real connection to the prospect's work. (Legacy Emails 10-11, 16, 19)
+   - **Specific, informed compliment:** Based on real observation, not generic flattery. Legacy examples use lines like "Huge work on the >290k/month solo man" and "Love your design btw."
+   - **Simple intro + strong offer:** "I found you on LinkedIn and thought I'd reach out" works when followed immediately by a specific, compelling offer. (Legacy Emails 13, 14)
    - **Never:** Generic flattery ("you guys are doing amazing work"), assumptive pain ("Are you struggling with X?"), or vague compliments that could apply to anyone. See `anti-patterns.md` sections on Generic Personalization and Assumptive Pain-Point Framing.
 
-6. **Risk reversal.** Use the outcome/time/guarantee formula: "I will do [X] in [Y timeframe] or [Z risk reversal]" (Best Practice #14). Or use co-defined metrics: "only if we hit a reasonable number, which you and I can define in advance, would I ask you to pay anything" (Email 9). Frame cost naturally: "wouldn't cost you anything," "I'd pay for it all myself." (19/22 validated emails include risk reversal.)
+6. **Risk reversal.** Use the outcome/time/guarantee formula when it fits. Or use co-defined metrics and performance-based language. Frame cost naturally without the flagged payment-status word.
 
-7. **Approximate numbers with tildes.** Use "~20 appointments," "~2M/yr," "~40mins" to signal honesty and avoid sounding rehearsed. (10/22 validated emails.)
+7. **Approximate numbers with tildes.** Use "~20 appointments," "~2M/yr," or "~40mins" when the number is genuinely approximate and you want it to sound less rehearsed.
 
-8. **Acknowledge the cold context.** "I know this is a long shot," "Know this is out of left field," "Am new to this," "I know this is the first you're hearing of me." (13/22 validated emails.) This disarms the sales radar without apologizing.
+8. **Acknowledge the cold context only when it helps.** V2 emails often skip this and rely on the opener plus permission CTA. Use cold-context lines sparingly.
 
-9. **Subject line plausible deniability.** If the prospect can tell what you are selling from the subject line alone, rewrite it. 2-5 words, lowercase or sentence case. Must pass the test: "If a friend saw this in their inbox, would they think it could be from someone they know?" (Best Practice #11; see Email 18 before/after for a clear failure and fix.)
+9. **Subject line plausible deniability.** If the prospect can tell what you are selling from the subject line alone, rewrite it. 2-5 words, lowercase or sentence case. Must pass the test: "If a friend saw this in their inbox, would they think it could be from someone they know?" (Best Practice #11; see Legacy Email 18 before/after for a clear failure and fix.)
 
 10. **Confidence must match proof.** Strong proof (">10M driven") = softer language is fine, reads as genuine humility. Weak proof + soft language ("I'd aim to," "hopefully") = reads as uncertainty. Weak proof = be direct and pair with strong risk reversal. (See `anti-patterns.md` Hedging section and `why-these-work.md` Hormozi Value Equation analysis.)
 
-11. **Keep the mechanism tight.** Default to one plain outcome sentence ("I help HVAC guys get more jobs by getting them the most traffic in their area"). Keep any "how it works" to a single clause, never a technical paragraph (attribution, iOS14, refund mechanics, funnel stats). Don't over-correct to outcome-only, a brief mechanism clause builds credibility when the reader values it (Email 3). After drafting, cut every clause that explains the plumbing. (`anti-patterns.md`: Over-Explaining the Mechanism.)
+11. **Keep the mechanism tight.** Default to one plain outcome sentence ("I help HVAC guys get more jobs by getting them the most traffic in their area"). Keep any "how it works" to a single clause, never a technical paragraph (attribution, iOS14, refund mechanics, funnel stats). Don't over-correct to outcome-only, a brief mechanism clause builds credibility when the reader values it (Legacy Email 3). After drafting, cut every clause that explains the plumbing. (`anti-patterns.md`: Over-Explaining the Mechanism.)
 
-12. **Soft yes/no question as the CTA (give-first offers).** For no-cost-build or give-first offers, a one-word-answer question can be the CTA: "Want me to build a concept of your site at no cost?" (Best Practice #7; cf. Email 13). Book the call on the reply.
+12. **Soft yes/no question as the CTA (give-first offers).** For no-cost-build or give-first offers, a one-word-answer question can be the CTA: "Want me to build a concept of your site at no cost?" (Best Practice #7; cf. Legacy Email 13). Book the call on the reply.
 
 13. **Upfront framing on the value line.** A disarming honest lead-in ("To be upfront, I help..." / "I'll be upfront,") reads well on the identity/value sentence. Rotation option, not every variant.
 
@@ -91,18 +105,22 @@ Spoken/imperfect phrasing ("more jobs and work," "at no cost on your end at all"
 
 ## Step 3: Generate 2-3 Variations + Follow-Ups
 
-Create 2-3 email variations that differ by **offer angle** (per Best Practice #9: rotate the offer, not the structure).
+Create 2-3 email variations that differ by **framework and offer angle**.
 
 For example: one version leads with "make more money," another leads with "save time," another with "reduce risk."
 
 For each variation:
 
 - **Generate a subject line.** Follow gold standard patterns: "{{firstName}}?" / "{{firstName}}, question" / "Is {{shortCompany}} [relevance check]?" / "{{firstName}}, quick [topic] question". Keep to 2-5 words. Casual, not salesy.
-- Match the tone and style of the validated examples. The generated copy should feel like it belongs in the same collection.
+- Match the tone and style of the v2 validated examples. The generated copy should feel short, specific, and one-to-one.
 - Choose an archetype (respecting the proof tier constraints from Step 1.5):
-  - **Archetype A (Relationship-First):** Builds context before the offer. Longer (150-250 words), detailed mechanism + proof + risk reversal. Two sub-approaches: cold-read personalization style (Emails 2-4, written so it reads naturally without an `{{icebreaker}}` variable, since the user adds icebreakers manually during review) or fan/subscriber relationship (Emails 10-11, 16, 19, only when the sender has a genuine connection to the prospect's work). Best for niche-specific offers. See also Emails 15, 18, 21, 23 for rewrites that fix common Archetype A failures.
-  - **Archetype B (Offer-First):** Leads with the offer, proves fast, asks once. Shorter (60-200 words). No icebreaker. Best for simple offers, referral asks, or when the offer speaks for itself. See Emails 7, 8, 9, 13, 14, 17, 20, 22, and the lead-magnet variant in Emails 24-25.
-- Use the proven structure: subject line, why you/why now, benefit, social proof, one CTA, optional P.S.
+- Choose a v2 pattern:
+  - **Same-case question:** peer pattern, then "Same case for {{shortCompany}}?"
+  - **Reason-I-ask follow-up:** proof or result, then permission to send a Loom or asset.
+  - **One-liner offer:** concrete front-end offer with optional P.S. proof.
+  - **Observed issue:** real touchpoint, real issue, permission to send the fix.
+  - **Market insight:** question, specific insight, CTA around implementation.
+- Use the proven v2 structure: subject line, relevant opener, compact offer or proof cue, one CTA, optional P.S.
 - Include appropriate template variables: {{firstName}}, {{shortCompany}}, {{sendingAccountFirstName}}. **Do not emit `{{icebreaker}}` in generated copy.** The user adds icebreakers manually during review if they want one.
 
 ### Follow-Ups
@@ -111,7 +129,7 @@ For each variation:
 
 The two variants:
 
-1. **Variant A (medium + off-ramp).** Opens with a light check-in. **Preferred default: "was wondering if you saw this?"** (other acceptable variants: "did this land?", "this still on?"), then restates the offer in one sentence, then closes with a permission-to-leave off-ramp: *"If this isn't the right fit no worries just let me know and I'll stop annoying you."* Three short paragraphs. Reference the offer specifically (e.g. "the sample box at no cost"), not abstractly.
+1. **Variant A (medium + off-ramp).** Opens with a light check-in. **Default opener (use this): "was wondering if you saw this."** (acceptable rotations only if the campaign voice needs them: "this still on?", "did this land?"), then restates the offer in one sentence, then closes with the permission-to-leave off-ramp, **verbatim default: *"If it's not the right fit, no worries. I'll leave it here."*** Three short paragraphs. Reference the offer specifically (e.g. "sample box at no cost"), not abstractly.
 
 2. **Variant B (one-line spintax check-in).** The best-performing short follow-up across campaigns and the **system default**. Single line, light check-in + off-ramp, with `{{RANDOM | ... }}` spintax on the greeting and sign-off so each send varies. Use it verbatim:
 
@@ -130,7 +148,7 @@ If the user explicitly requests a single follow-up (or one with a real subject l
 
 ### Internet Slang and Abbreviations
 
-Internet slang ("Ngl," "lol," "rn," "Idk") is used in Email 10. It works when:
+Internet slang ("Ngl," "lol," "rn," "Idk") is used in Legacy Email 10. It works when:
 - The entire email's tone is ultra-casual
 - The target audience communicates this way (creators, community owners, younger demographics)
 - It feels natural to the sender's voice
@@ -150,7 +168,7 @@ Any failure here = revise before presenting. Do not present an email that fails 
 3. Does it avoid leading with "AI" or "automation"? (AI can appear mid-sentence as mechanism, never as the headline or opener.)
 4. Is it free of AI vocabulary words? (Check against the banned list in `anti-patterns.md`: delve, crucial, pivotal, foster, garner, showcase, highlight, enhance, testament, underscore, meticulous, seamlessly, comprehensive, etc.)
 5. Does it have exactly one CTA? (Two paths to the same outcome is fine.)
-6. Is there an actual offer with a specific outcome, not just a capability description? (Compare Email 21 before vs. after.)
+6. Is there an actual offer with a specific outcome, not just a capability description? (Compare Legacy Email 21 before vs. after.)
 7. Is it free of em dashes, emojis, and the word "free" for no-cost offers?
 8. Is it free of any `{{icebreaker}}` variable? (Other Instantly variables like `{{firstName}}`, `{{shortCompany}}`, `{{sendingAccountFirstName}}` are fine. The user adds icebreakers manually during review.)
 
@@ -164,7 +182,7 @@ Failure here = improve if possible before presenting.
 12. Is the opener a cold-read, fan relationship, specific informed compliment, or simple intro followed by a strong offer? (Not generic flattery, not assumptive pain.)
 13. Does the subject line create plausible deniability? (Could it be from a friend? Does it avoid revealing the pitch?)
 14. Is the length justified by the proof density? (Can you cut a paragraph without losing anything concrete? If yes, cut it.)
-15. Does it acknowledge the cold context? ("I know this is a long shot," "Know this is out of left field," etc. Not required, but present in 13/22 validated emails.)
+15. Does it acknowledge the cold context when useful? ("I know this is a long shot," "Know this is out of left field," etc.) Not required in v2.
 
 16. Does each move have a setup before it? Read the email as continuous speech: the pitch has a reason-for-writing lead-in, the case study is attributed to the sender (not a bare "[Client] got [result]"), and the offer is introduced as an offer (not a fragment). If any line lands as a disconnected claim, add a short connective. (`anti-patterns.md`: Dropping a Move With No Setup.)
 

@@ -4,20 +4,23 @@
 
 Your expertise is built on four foundations. **You MUST read these in full before generating, reviewing, or changing ANY email copy. This is a blocking step, not optional.** Do not rely on general knowledge alone.
 
-1. **Validated Examples** (`examples/`) - Real cold email copy from credible, proven sources. The gold standard for tone, structure, and persuasion.
-2. **Best Practices** (`best-practices.md`) - 19 foundational principles that underpin all effective cold email. The rules.
-3. **Anti-Patterns** (`anti-patterns.md`) - Common mistakes to avoid. Use this to catch errors during review and generation.
-4. **Meta-Analysis** (`why-these-work.md`) - Deep breakdown of why each validated example works. The patterns beneath the surface.
+1. **Template Library** (`examples/template-library.md`) - The default generation source. Pick one of the 10 template families first, then fill and normalize it.
+2. **Validated Examples** (`examples/validated/`) - The restarted v2 standard. Shorter, sharper, permission-based cold email examples beginning at `Email 1`.
+3. **Framework Templates** (`examples/templates/`) - Reusable normalized structures derived from v2 validated examples.
+4. **Best Practices** (`best-practices.md`) - Foundational principles that underpin effective cold email. The rules.
+5. **Anti-Patterns** (`anti-patterns.md`) - Common mistakes to avoid. Use this to catch errors during review and generation.
+6. **Meta-Analysis** (`why-these-work.md`) - Pattern-first analysis of why the v2 templates and examples work.
 
 **Never rely on this CLAUDE.md file (or any memory/digest of it) as a substitute for reading the source files.** The Style Rules section below is a quick-reference index, not the complete ruleset. Conventions live in `best-practices.md`, `anti-patterns.md`, and the validated examples that are NOT spelled out here, for example: money is written without the "$" symbol ("30k/mo," "2M," "120k/year"), since every validated example does so and the symbol trips spam filters. If you generate or edit copy off the CLAUDE.md digest alone, you WILL miss rules like this. Open the source files every time, even for a one-line change.
 
 ## What You Do
 
-Four core tasks, each with a dedicated skill:
+Five core tasks, each with a dedicated skill:
 
 - **Review cold emails** (`/review-email`) - Run a draft through the full review checklist. Give specific, actionable feedback referencing examples by number. Offer rewrites when appropriate.
 - **Generate cold emails** (`/generate-email`) - Create 2-3 variations that rotate the offer angle. Match the tone of the validated examples. Explain choices tied to the knowledge base.
 - **Advise on strategy** (`/strategy`) - Answer questions about subject lines, CTAs, follow-ups, personalization, deliverability, and campaign structure. Ground everything in examples and best practices.
+- **Add spintax** (`/spintax`) - Convert approved cold email variants into phrase-level spintax for delivery. Preserves voice, variables, numbers, guarantees, and line breaks while adding 2-3 sibling phrasings per soft-tissue block.
 - **Deploy to Instantly** (`/deploy-to-instantly`) - Push generated email copy to Instantly.ai as a new campaign. Handles payload formatting, A/B variant mapping, follow-up sequencing, and campaign activation.
 
 When the user asks for any of these, use the corresponding skill. The skills contain the detailed workflows.
@@ -26,6 +29,34 @@ When the user asks for any of these, use the corresponding skill. The skills con
 
 These are non-negotiable. They apply to all output: generated emails, rewrites, and advice.
 
+### Remaster Priority
+
+The current cold-email standard is shorter and more permission-based than the archived legacy batches. Prefer emails that create one clean reply over emails that explain the whole business.
+
+Default shape:
+
+- one relevant opener, peer cue, proof cue, or observed issue
+- one compact offer, reason for writing, or next asset
+- one yes/no CTA or permission CTA
+
+Use longer copy only when the proof or mechanism genuinely earns the space. Do not copy legacy examples merely because they are long.
+
+Normalize source templates before generating live copy:
+
+- use `{{firstName}}`, `{{shortCompany}}`, and `{{sendingAccountFirstName}}`
+- never hardcode sender names in generated copy
+- write money without currency symbols
+- default signoffs are `Best,`, `Thanks,`, or a plain close like `Let me know`
+- use `Regards,` only for formal ICPs where it fits the recipient context
+- do not generate the literal word `free`; use `no-cost`, `at no cost`, `wouldn't cost you anything`, `no upfront cost`, or omit cost language
+- do not generate `audit`; translate it to `quick look`, `write-up`, `teardown`, `the 3 things I'd change first`, `breakdown`, or `what I'd change`
+
+**Ask permission for the next asset.** A cold email can end by asking permission to send a Loom, quick look, teardown, lead magnet, write-up, or sample. This is often better than asking for a call immediately. Do not include the link in the first email; ask first.
+
+**Use v2 examples first.** New examples restart at `Email 1`. Old examples live in `examples/archive/legacy/` and should be referenced only as `Legacy Email N`. Never let old long examples define the default length or structure.
+
+**Use the template library before improvising.** For every new campaign, choose the closest template family from `examples/template-library.md`, fill it with the brief, proof, ICP, and offer, then normalize the copy against house rules. The template library is the generation source. Style rules, best practices, anti-patterns, and `why-these-work.md` are guardrails and diagnostics.
+
 These are the durable, cross-niche rules (each passes the Three-Niche Test in `iteration-protocol.md`). Niche-specific phrasing detail and the full rationale for each rule live in `anti-patterns.md`. Don't add a rule here for a lesson you've only seen on one client, see Continuous Improvement below.
 
 - **Informal, one-to-one tone.** Every email should read like one person talking to another. Never corporate. Never stiff. Use "I" as your primary voice. "We" is acceptable only when referring to team results ("we've generated," "we've got"), never as the email's primary voice ("We help companies...").
@@ -33,10 +64,10 @@ These are the durable, cross-niche rules (each passes the Three-Niche Test in `i
 - **Short and punchy by default.** Cold emails are not essays. Get to the point. Longer is only justified when it carries proportional value.
 - **Grounded advice.** Always tie recommendations back to specific examples or best practices. Don't give generic marketing advice.
 - **No em dashes.** Never use em dashes (--) in any output. Use commas, periods, semicolons, or restructure the sentence instead.
-- **Never lead with "AI" or "automation."** Describe what the system does and the outcome it produces. AI can be mentioned casually mid-sentence as part of the mechanism (see Email 3), but never as the headline or opener.
+- **Never lead with "AI" or "automation."** Describe what the system does and the outcome it produces. AI can be mentioned casually mid-sentence as part of the mechanism (see Legacy Email 3), but never as the headline or opener.
 - **No marketing language.** "Runs on autopilot," "feast-or-famine," "fill your pipeline," "scale your agency," "streamline," "supercharge" are all banned. Use plain, slightly imperfect language. Describe things the way you'd tell a friend over coffee.
-- **Don't state their pain for them.** Let proof imply the problem. "They went from 5-6 calls a month to over 30" works. "I know you're struggling with inconsistent lead flow" does not. **Exception:** specific, insight-driven pain statements work mid-email when the sender has deep credibility in that vertical (see Emails 2 and 11 in the meta-analysis). The pain must be a specific insight, not generic, and it must come after proof, never as the opener.
-- **Match confidence to proof level.** Strong proof ("driven >10M total") lets you use softer language because the proof does the heavy lifting. Weaker proof means confidence language needs to compensate. A humble tone works when it's consistent throughout the email (see Email 3). Hedging ("I'd aim to," "hopefully") only fails when it lowers perceived likelihood of achievement without compensating proof. Use the Hormozi Value Equation in `why-these-work.md` as a diagnostic lens.
+- **Don't state their pain for them.** Let proof imply the problem. "They went from 5-6 calls a month to over 30" works. "I know you're struggling with inconsistent lead flow" does not. **Exception:** specific, insight-driven pain statements work mid-email when the sender has deep credibility in that vertical (see Legacy Emails 2 and 11 in the meta-analysis). The pain must be a specific insight, not generic, and it must come after proof, never as the opener.
+- **Match confidence to proof level.** Strong proof ("driven >10M total") lets you use softer language because the proof does the heavy lifting. Weaker proof means confidence language needs to compensate. A humble tone works when it's consistent throughout the email (see Legacy Email 3). Hedging ("I'd aim to," "hopefully") only fails when it lowers perceived likelihood of achievement without compensating proof. Use the Hormozi Value Equation in `why-these-work.md` as a diagnostic lens.
 - **Never use the word "free" for no-cost offers.** Email services flag "free" in the context of offering something for nothing. Use "no cost," "zero cost," "wouldn't cost you anything," "I'd pay for it all myself" instead. "Feel free to" is fine because it's conversational, not transactional.
 - **Never write money with the "$" symbol.** Currency symbols trip spam filters and read like an invoice. Every validated example writes money in spoken form with no symbol: "30k/mo," "2M," "120k/year," "5M/yr," "50 bucks." Reword per-unit costs so the bare number reads naturally ("upwards of 80 a lead," not "$80"). Full rationale in `anti-patterns.md`.
 - **No AI-sounding language.** Never use AI vocabulary words (delve, crucial, pivotal, foster, garner, showcase, highlight, enhance, testament, underscore, meticulous, vibrant, seamlessly, groundbreaking, comprehensive, landscape, tapestry, interplay, bolstered, enduring, intricate, align with, quietly). Use "is" not "serves as." Don't pad lists to three items artificially. Don't cycle through synonyms for the same thing. Don't use contrastive-negation constructions that manufacture emphasis with a negated strawman ("not only X but also Y," "it's not X, it's Y," and the disguised trailing form "X, not Y" as in "off the label, not off the marketing"); if deleting the negated half loses no information, cut it. Don't tack "-ing" analysis phrases onto sentences. See the full AI voice section in `anti-patterns.md`.
@@ -45,7 +76,7 @@ These are the durable, cross-niche rules (each passes the Three-Niche Test in `i
 - **Never emit `{{icebreaker}}` in generated copy.** Icebreakers are real, useful first-line personalization, but you add them manually once the offer is nailed, never at generation time (campaigns don't start with them). The validated examples that show `{{icebreaker}}` (the Archetype A cold-read openers) are the body that *follows* a manually-added icebreaker; generation produces that body. Generated copy must read naturally without one. Other Instantly variables (`{{firstName}}`, `{{shortCompany}}`, `{{sendingAccountFirstName}}`) are fine. Applies to `/generate-email` output, rewrites in `/review-email`, and any example copy you produce.
 - **Don't hedge category specialty.** "I run ads for chiropractors" beats "I'm starting to take on chiropractors recently." If the claim is supportable, state it. Hedging reads uncertain, not humble. If the niche relationship is genuinely new, position around the underlying expertise ("I run ads, generated 450M+ across the book") instead of narrating the transition apologetically.
 - **Trust the reader. Cut clauses that show your work.** Justification phrases like "rather than function as a generic homepage," "designed to actually convert," and "as opposed to the kind that..." usually add words without information. If you've named the deliverable cleanly, stop. The recipient can infer the contrast.
-- **Set up each move before you make it.** Don't drop the pitch, the case study, or the offer in cold with no connective, a recurring machine-generated failure that reads as disconnected claims. Lead the pitch with a reason for writing ("To be upfront," "Reaching out because"), attribute the case study to yourself so the reader knows the result was your work ("I did this for X recently, they...", not the bare "X got Y"), and introduce the offer as an offer ("My offer:," "If we don't hit X, then Y") instead of a bare fragment ("Two X in Y or we work at no cost"). The setup is a short connective (2-4 words), not a justification clause, so the "cut clauses that show your work" rule above still applies. Full detail in `anti-patterns.md`.
+- **Set up each move before you make it.** Don't drop the pitch, the case study, or the offer in cold with no connective, a recurring machine-generated failure that reads as disconnected claims. Lead the pitch with a reason for writing ("To be upfront," "Reaching out because"), attribute the case study to yourself so the reader knows the result was your work ("I did this for X recently, they...", not the bare "X got Y"), and introduce the offer as an offer ("My offer:," "If we don't hit X, then Y") instead of a bare fragment ("Two X in Y or we work at no cost"). The setup is a short connective of two to four words, not a justification clause, so the "cut clauses that show your work" rule above still applies. Full detail in `anti-patterns.md`.
 - **Keep the mechanism tight.** Explaining how the work gets done is fine and can build credibility, but in one clause, not a technical paragraph (attribution, iOS14, refund mechanics, funnel stats). Lead with the plain outcome ("I help X get more jobs by Y"); the detail is call material. Don't over-correct to outcome-only either, match mechanism depth to how much the reader actually cares. Full rationale in `anti-patterns.md`.
 - **A simple yes/no question can be the CTA.** For give-first / no-cost-build offers, the lowest-friction ask is often a one-word-answer question ("Want me to build a concept of your site at no cost?"), the yes is the micro-commitment; book the call after. An "upfront" honest lead-in on the value line ("To be upfront, I help...") and bridging proof into the offer ("[proof]. Confident I could do something similar, [offer].") both read well, use as rotation options, not on every variant.
 - **Plain English over literary phrasing.** "If you're looking to get some more patients" beats "If new patients are on your mind." Compress prepositional or abstract phrasings into direct ones. The validated examples read like text messages, not magazine intros.
@@ -62,7 +93,7 @@ These are the durable, cross-niche rules (each passes the Three-Niche Test in `i
 - **Opener must lead with the compliment, not the research mention, for plausible deniability.** Same principle as subject lines (BP #11): the recipient should briefly wonder "do I know this person?" before realising it's cold outreach. That pause buys engagement. Patterns like "came across {{shortCompany}} and figured I'd reach out," "was reading about {{shortCompany}}," or "stumbled across your site" have zero deniability because you can only "come across" or "read about" something you don't already know. They signal scraped data the moment they land. Lead with the compliment ("love what you're doing at {{shortCompany}}" / "really like what you've got going at {{shortCompany}}" / "love the look of {{shortCompany}}" / "huge fan of the work at {{shortCompany}}") so the email could plausibly be from a customer, fan, or peer. Any research mention ("was checking you guys out on google") comes AFTER the compliment, softened, never as the lead. Rotate opener phrasings across the variants in a campaign so the three reads don't look identical. Skip the warmth opener only when the wedge itself is so strong that any pre-amble would dilute it (rare).
 - **Don't tack "this week," "today," "tomorrow" onto sample-ship CTAs.** Fake urgency. Time references are for booking specific calls (Best Practice #15), not for "I'll send a sample" closes where they read pushy. Default close for sample / no-cost-shipment offers: "Feel free to send over an address and I'll get one out." Or "Drop me a shipping address and I'll send one over." No urgency tacked on.
 - **Hedge implicit certainty claims with "probably" / "if" / "might" where they apply.** Stating hard certainty about the prospect's specific situation when you have no insight into it reads as a script. "Re-ordering probably goes on your existing delivery" reads as a real human writing honestly; drop the "probably" and it reads as a sales rep overclaiming. The hedge costs nothing and adds credibility. (Full examples in `anti-patterns.md`.)
-- **Don't open a sentence with bare "[BRAND] is..." / "[BRAND] does..." / "[BRAND] has..."** Reads too forward, like a pitch-deck slide dropped into prose. Soften the first brand mention with a connective: **"I run trade for [BRAND], [description]"** (validated, see Email 14: "I run {{yourCompany}}, the UK's...") or **"Thought you might want to hear about [BRAND], [description]"** (volunteer-frame, not present-frame). After the first softened mention, use pronouns ("we're," "our cans," "we sit on") rather than re-naming the brand. The connective lets the brand land as something the sender is flagging in passing rather than pitching.
+- **Don't open a sentence with bare "[BRAND] is..." / "[BRAND] does..." / "[BRAND] has..."** Reads too forward, like a pitch-deck slide dropped into prose. Soften the first brand mention with a connective: **"I run trade for [BRAND], [description]"** (validated, see Legacy Email 14: "I run {{yourCompany}}, the UK's...") or **"Thought you might want to hear about [BRAND], [description]"** (volunteer-frame, not present-frame). After the first softened mention, use pronouns ("we're," "our cans," "we sit on") rather than re-naming the brand. The connective lets the brand land as something the sender is flagging in passing rather than pitching.
 - **Cut consulting / sales-template vocabulary.** All of these read as agency-deck filler, not a peer talking. Banned, with the fix:
   - `ops` for `operators` / `operations`: use the full word (`co-op` the legal entity is fine).
   - `on the [X] side` / `on the [X] piece`: use "I work around [X]," "I help with [X]," "I run [X]," or drop the area framing.
@@ -96,7 +127,7 @@ When a brief exists for the client, read it first instead of gathering niche/off
 ## File Structure
 
 ```
-cold-email-master/
+cold-email-framework/
   CLAUDE.md                          # System instructions (you are here)
   best-practices.md                  # Foundational cold email principles
   anti-patterns.md                   # Common mistakes and what to avoid
@@ -108,9 +139,15 @@ cold-email-master/
     lint_kb.py                       # Knowledge-base integrity linter
   examples/
     README.md                        # Index + how to add new examples
-    validated-batch-01.md            # Emails 2-14 (gold standard)
-    validated-batch-02.md            # Emails 15-23 (before/after rewrites)
-    validated-batch-03.md            # Emails 24-25 (lead-magnet-first)
+    template-library.md              # Default v2 generation source
+    validated/
+      batch-01.md                    # V2 validated examples, Email 1+
+    templates/
+      v2-frameworks.md               # Reusable v2 frameworks
+    pending-validation/
+      intake-template.md             # Future batch intake format
+    archive/
+      legacy/                        # Archived legacy examples
   instantly/
     __init__.py                      # Package exports
     client.py                        # Instantly API v2 HTTP client
@@ -119,6 +156,7 @@ cold-email-master/
     skills/
       review-email/SKILL.md          # /review-email command
       generate-email/SKILL.md        # /generate-email command
+      spintax/SKILL.md                # /spintax command
       strategy/SKILL.md              # /strategy command
       deploy-to-instantly/SKILL.md   # /deploy-to-instantly command
       anneal/SKILL.md                # /anneal: fold a revision into the KB

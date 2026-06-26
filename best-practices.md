@@ -1,5 +1,106 @@
 # Cold Email Best Practices
 
+## V2 Remaster Priority
+
+The current house standard starts from `examples/validated/`, not the archived legacy batches.
+
+Default to a shorter, permission-based email when the offer, observed issue, insight, or lead magnet is strong enough to carry the copy.
+
+The default v2 shape:
+
+- one relevant opener, peer cue, proof cue, or observed issue
+- one compact offer or reason for writing
+- one yes/no CTA or permission CTA
+
+Use longer copy only when proof, mechanism, or risk reversal genuinely earns the space.
+
+---
+
+## Short is the default, but only when the offer carries the weight
+
+A short email is not automatically better. It works when the recipient can understand why replying is useful without a long explanation.
+
+Use 1 to 5 lines when:
+
+- the offer is obvious
+- the CTA is only permission to send something
+- the first line is a strong relevance check
+- there is a concrete observed issue
+- the lead magnet is useful enough to sell itself
+
+Use longer copy when:
+
+- the mechanism is unfamiliar
+- the risk reversal needs context
+- proof is the main persuasion
+- the recipient needs a little more trust before the ask
+
+---
+
+## The two-email permission sequence
+
+The default v2 sequence:
+
+1. Email 1 asks a concise relevance question.
+2. Email 2 explains "the reason I ask," gives one compact proof or result line, and asks permission to send the next asset.
+
+Email 1 should not try to close the call.
+
+Email 2 should not become a mini-newsletter. It should add just enough proof to justify the first question.
+
+---
+
+## Ask permission to send the next asset
+
+"Can I send a 5-minute Loom explaining how?" works because it is not a calendar ask, not a link, and not a full pitch.
+
+Use permission CTAs for Looms, lead magnets, quick looks, write-ups, teardown-style notes, samples, and specific fix lists.
+
+Do not include the link in the first email. Ask first.
+
+---
+
+## Default word policy for no-payment offers and deliverables
+
+Do not generate the literal word `free` in live cold email copy when describing something offered for no payment.
+
+Use `no-cost`, `at no cost`, `wouldn't cost you anything`, `no upfront cost`, or avoid naming price when the structure already implies low risk.
+
+Do not generate `audit` as the deliverable name. Replace it with what the recipient actually gets:
+
+- `the 3 things I'd change first`
+- `a quick look`
+- `a write-up`
+- `a teardown`
+- `the breakdown`
+- `what I'd change`
+
+The user may manually edit final outputs later. The system should not emit those literal words by default.
+
+---
+
+## Rotate frameworks, not just words
+
+V2 variants should be structurally different, not three rewrites of the same long proof-heavy template.
+
+Templates are now an explicit generation layer. Start from one of the 10 template families in `examples/template-library.md`, then adapt the offer, proof, and CTA.
+
+The system is not "write anything that follows the principles." The system is "choose the right proven template, fill it, then normalize it."
+
+Rotate among:
+
+- same-case question
+- reason-I-ask follow-up
+- lead magnet plus case study
+- one-liner front-end offer
+- direct offer plus risk reversal
+- real observed issue
+- unique market insight
+
+Keep one clear offer per sequence.
+
+---
+
 ## Core Principles & Foundations
 
 These are the fundamental rules that underpin all effective cold email. They can occasionally be bent (like length), but they serve as the pillars of high-performing campaigns.
@@ -21,7 +122,7 @@ There are only six offers in the world:
 - Raise status
 - Live longer
 
-**In B2B, focus on the first four.** "Raise status" can occasionally support a primary offer (e.g., "most of the top people are running something similar" in Email 10, or positioning your offer as something that makes the prospect look good to their clients in Email 4). But it should never be the lead angle. Use it sparingly and only when it's natural.
+**In B2B, focus on the first four.** "Raise status" can occasionally support a primary offer (e.g., "most of the top people are running something similar" in Legacy Email 10, or positioning your offer as something that makes the prospect look good to their clients in Legacy Email 4). But it should never be the lead angle. Use it sparingly and only when it's natural.
 
 Every campaign should clearly align to one primary offer, not several at once.
 
@@ -77,7 +178,7 @@ Value-first emails build trust without needing an immediate reply.
 
 ## 5. Use a simple, proven cold email structure
 
-Match length to proof density. Under 100 words for simple offers or referral asks (Emails 7, 13). 150-250 words when every paragraph earns its place with specific proof, mechanism, or risk reversal (Emails 2, 4, 8, 10, 11). Most validated examples are 150+ words. Avoid vague corporate language.
+Match length to proof density. Under 100 words for simple offers or referral asks (Legacy Emails 7, 13). 150-250 words when every paragraph earns its place with specific proof, mechanism, or risk reversal (Legacy Emails 2, 4, 8, 10, 11). Most validated examples are 150+ words. Avoid vague corporate language.
 
 ### Basic framework:
 
@@ -111,10 +212,10 @@ Match length to proof density. Under 100 words for simple offers or referral ask
 
 Every cold email follows four steps in sequence. This is the structural backbone.
 
-1. **Personalization** — Get past the "is this spam?" filter. Cold reading, genuine compliment, or simple context like "I found you on LinkedIn." Two sentences max. One is ideal. Must pass the "would a real person send this?" test.
-2. **Who Am I / Why Do I Matter** — One or two sentences combining social proof with brief identity. "I currently work with [client/industry reference]. I've done [specific number]." Handles social proof, authority, and in-group signaling simultaneously.
-3. **Offer** — Present the offer using the outcome/time/guarantee formula (see Best Practice #14): "I will do [X outcome] in [Y time] or [Z risk reversal]." The offer should feel almost too good to be true.
-4. **Call to Action** — One specific ask. Provide the exact time, your phone number, or a one-click calendar link. One step between "yes" and "booked."
+1. **Personalization:** Get past the "is this spam?" filter. Cold reading, genuine compliment, or simple context like "I found you on LinkedIn." Two sentences max. One is ideal. Must pass the "would a real person send this?" test.
+2. **Who Am I / Why Do I Matter:** One or two sentences combining social proof with brief identity. "I currently work with [client/industry reference]. I've done [specific number]." Handles social proof, authority, and in-group signaling simultaneously.
+3. **Offer:** Present the offer using the outcome/time/guarantee formula (see Best Practice #14): "I will do [X outcome] in [Y time] or [Z risk reversal]." The offer should feel almost too good to be true.
+4. **Call to Action:** One specific ask. Provide the exact time, your phone number, or a one-click calendar link. One step between "yes" and "booked."
 
 All four elements must be present in every email. The order can shift slightly, but don't skip any.
 
@@ -150,9 +251,9 @@ If your CTA is:
 
 You can support the CTA with setup lines, as long as they point to the same action.
 
-**Two paths, same CTA:** Offering two ways to engage toward the same outcome is not a multiple-CTA violation. "Do you want me to go ahead and build it, or would you prefer to chat first?" gives the prospect control over *how* to engage, not *what* to engage with. Both paths lead to the same place. See Emails 2, 4, 13.
+**Two paths, same CTA:** Offering two ways to engage toward the same outcome is not a multiple-CTA violation. "Do you want me to go ahead and build it, or would you prefer to chat first?" gives the prospect control over *how* to engage, not *what* to engage with. Both paths lead to the same place. See Legacy Emails 2, 4, 13.
 
-**A simple yes/no question can BE the CTA.** For give-first or no-cost-build offers, the lowest-friction ask is often a question the prospect answers in one word: "Want me to build a concept of your site at no cost?" (cf. Email 13's "Is {{shortCompany}} looking for writers?"). The yes is the micro-commitment; you book the call on the reply. This stays a single CTA, the question is the one action you want.
+**A simple yes/no question can BE the CTA.** For give-first or no-cost-build offers, the lowest-friction ask is often a question the prospect answers in one word: "Want me to build a concept of your site at no cost?" (cf. Legacy Email 13's "Is {{shortCompany}} looking for writers?"). The yes is the micro-commitment; you book the call on the reply. This stays a single CTA, the question is the one action you want.
 
 ---
 
@@ -175,7 +276,7 @@ This aligns naturally with the reduce risk offer and keeps deliverability clean.
 
 - Keep the framework consistent
 - Change how you communicate the core benefit
-- This alone can create 3–7 strong campaign variations
+- This alone can create 3 to 7 strong campaign variations
 
 If something works, don't over-optimize.
 

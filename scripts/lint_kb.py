@@ -3,8 +3,7 @@
 
 Enforces the structural invariants that ad-hoc edits keep breaking:
   1. Every "Email N" reference resolves to an example that actually exists
-     (or is explicitly listed as removed, in which case referencing it is
-     still an error: removed emails should have no live references).
+     unless it is explicitly labeled as a legacy reference.
   2. Example numbers are unique and the removed set is documented.
   3. {{companyName}} only appears in the designated teaching contexts,
      never as live copy.
@@ -34,10 +33,14 @@ ROOT = Path(__file__).resolve().parent.parent
 # per-campaign working files, not the shared system).
 KB_GLOBS = [
     "CLAUDE.md",
+    "AGENTS.md",
     "best-practices.md",
     "anti-patterns.md",
     "why-these-work.md",
     "examples/*.md",
+    "examples/validated/*.md",
+    "examples/templates/*.md",
+    "examples/pending-validation/*.md",
     ".claude/skills/review-email/SKILL.md",
     ".claude/skills/generate-email/SKILL.md",
     ".claude/skills/strategy/SKILL.md",
@@ -45,9 +48,9 @@ KB_GLOBS = [
     ".claude/skills/anneal/SKILL.md",
 ]
 
-# Examples that were removed or never existed. Referencing any of these is an
-# error; this list only exists so the README note and this linter agree.
-REMOVED_EXAMPLES = {1, 5, 6, 12}
+# Legacy examples live under examples/archive/legacy and are not part of the
+# current v2 standard. References to them must say "Legacy Email N".
+LEGACY_EXAMPLES = {2, 3, 4, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
 
 # Files allowed to contain {{companyName}} because they teach Claude to flag it
 # in user-submitted drafts, or describe the linter rule itself. Everywhere else
@@ -55,6 +58,7 @@ REMOVED_EXAMPLES = {1, 5, 6, 12}
 COMPANYNAME_ALLOWED = {
     "anti-patterns.md",
     "CLAUDE.md",
+    "AGENTS.md",
     "iteration-protocol.md",
     ".claude/skills/anneal/SKILL.md",
 }
@@ -62,13 +66,14 @@ COMPANYNAME_ALLOWED = {
 # Files where {{icebreaker}} is legitimate: the validated examples that keep it,
 # plus the docs that explain the manual-only rule.
 ICEBREAKER_ALLOWED = {
-    "examples/validated-batch-01.md",
-    "examples/validated-batch-02.md",
-    "examples/validated-batch-03.md",
+    "examples/archive/legacy/legacy-validated-batch-01.md",
+    "examples/archive/legacy/legacy-validated-batch-02.md",
+    "examples/archive/legacy/legacy-validated-batch-03.md",
     "best-practices.md",
     "anti-patterns.md",
     "why-these-work.md",
     "CLAUDE.md",
+    "AGENTS.md",
     ".claude/skills/generate-email/SKILL.md",
     ".claude/skills/strategy/SKILL.md",
     ".claude/skills/anneal/SKILL.md",
@@ -88,10 +93,10 @@ def rel(path: Path) -> str:
 
 
 def defined_examples() -> dict[int, str]:
-    """Email numbers actually defined, parsed from the batch files only."""
+    """Current v2 email numbers actually defined, parsed from active batches."""
     defined: dict[int, str] = {}
     header = re.compile(r"^##\s+Email\s+(\d+)\b")
-    for path in sorted(ROOT.glob("examples/validated-batch-*.md")):
+    for path in sorted(ROOT.glob("examples/validated/batch-*.md")):
         for line in path.read_text(encoding="utf-8").splitlines():
             m = header.match(line)
             if m:
@@ -123,7 +128,7 @@ def expand_refs(blob: str) -> set[int]:
     return nums
 
 
-REF = re.compile(r"Emails?\s+((?:\d+(?:\s*[-–]\s*\d+)?(?:\s*(?:,|and|&)\s*)?)+)")
+REF = re.compile(r"(?<!Legacy\s)Emails?\s+((?:\d+(?:\s*[-–]\s*\d+)?(?:\s*(?:,|and|&)\s*)?)+)")
 
 
 def check_references(files: list[Path], defined: dict[int, str]) -> list[str]:
@@ -138,7 +143,7 @@ def check_references(files: list[Path], defined: dict[int, str]) -> list[str]:
             for m in REF.finditer(line):
                 for n in expand_refs(m.group(1)):
                     if n not in valid:
-                        why = "removed" if n in REMOVED_EXAMPLES else "undefined"
+                        why = "legacy" if n in LEGACY_EXAMPLES else "undefined"
                         errors.append(
                             f"ERROR {rel(path)}:{lineno}  references Email {n} ({why})"
                         )
@@ -201,7 +206,8 @@ def check_counts(files: list[Path]) -> list[str]:
         for lineno, line in enumerate(text.splitlines(), start=1):
             for m in pat.finditer(line):
                 # Ignore obvious non-trait ratios (dates, dimensions in tables).
-                if "word" in line.lower() or "px" in line.lower():
+                lower = line.lower()
+                if "word" in lower or "px" in lower or "score" in lower:
                     continue
                 out.append(
                     f"WARN  {rel(path)}:{lineno}  trait count '{m.group(0)}' "
@@ -226,7 +232,7 @@ def main() -> int:
     print(f"lint_kb: {len(files)} files, "
           f"{len(defined)} examples defined "
           f"({', '.join(str(n) for n in sorted(defined))})")
-    print(f"lint_kb: removed/absent: {', '.join(str(n) for n in sorted(REMOVED_EXAMPLES))}")
+    print(f"lint_kb: legacy-only: {', '.join(str(n) for n in sorted(LEGACY_EXAMPLES))}")
     print()
 
     for line in errors:
