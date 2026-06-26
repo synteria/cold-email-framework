@@ -544,7 +544,7 @@ The strongest framing shows what changes for them, not what your system does.
 - "$80+ a lead," "$5k+ deal," "$3,000 in waste"
 - Any monetary figure carrying a literal `$` (or other currency symbol)
 
-**Why it fails:** Currency symbols are a classic spam-filter signal, scored alongside the same patterns as "free" and explicit pricing, so they nick deliverability. They also read like a quote or an invoice rather than one person talking. Every validated example writes money as plain words and never once uses the symbol: "290k/month" and "500k/month" (Legacy Email 15), "72k" and "250k/month" (Legacy Email 18), "10-20k/mo" (Legacy Email 23), "92k per month" (Legacy Email 4), "20-30k/mo" (Legacy Email 10), "20k to 5M/yr" and "30k/mo" (Legacy Email 11), "50 bucks" / "250 bucks" (Legacy Emails 19, 20). The only "$" anywhere in the example set sits inside a flagged *before* sample ("$500 / $2,500," Legacy Email 18), which is the mistake the rewrite fixes.
+**Why it fails:** Currency symbols are a classic spam-filter signal, scored alongside the same patterns as "free" and explicit pricing, so they nick deliverability. They also read like a quote or an invoice rather than one person talking. Write money as plain words or compact spoken figures: "290k/month," "72k," "10-20k/mo," "92k per month," "30k/mo," or "50 bucks." Avoid `$` in cold copy.
 
 **Do instead:** Write amounts in spoken "k" / "M" form with no symbol: "2M brand," "120k/year," "15k/month," "5M/yr." For small literal cash use "bucks": "50 bucks in credits." For per-unit costs, reword so the bare number reads naturally: "upwards of 80 a lead," "around 90 a click," or "80 bucks a lead," never "$80." This is purely a formatting rule, the figures and claims themselves are unchanged (still subject to the defensible-claims and no-prices-in-first-email rules); only the symbol goes.
 
@@ -560,7 +560,7 @@ The strongest framing shows what changes for them, not what your system does.
 
 **Why it fails:** Every sentence needs to pull its weight. Prospects skim.
 
-**The rule:** Match length to proof density. Under 100 words for simple offers and referral asks (Legacy Emails 7, 13). 150-250 words when every paragraph earns its place with specific proof, mechanism, or risk reversal (Legacy Emails 2, 4, 8, 10, 11). Most validated examples are 150+ words.
+**The rule:** Match length to proof density. V2 defaults short. Use longer copy only when every paragraph earns its place with specific proof, mechanism, or risk reversal.
 
 **The test:** Can you cut a paragraph without losing anything concrete? If yes, cut it. If every paragraph adds specific proof, mechanism, or risk reversal, it can stay.
 
@@ -576,7 +576,7 @@ The strongest framing shows what changes for them, not what your system does.
 
 **Do instead:** State the outcome in one plain sentence the prospect would actually use ("I help HVAC guys get more jobs by getting them the most traffic in their area"), and keep any mechanism to a single clause if it earns its place.
 
-**The nuance (don't over-correct to outcome-only):** Mechanism has a time and a place. A brief mechanism line builds credibility when the reader values the how (Legacy Email 3: "an outreach system that uses AI to find people hiring videographers... and then pitches them", one clause, not a paragraph) or when the mechanism IS the differentiator. The test is length and audience, not presence: one interesting clause, not a paragraph of plumbing. Match the depth to how much the specific reader cares; when unsure, go shorter.
+**The nuance (don't over-correct to outcome-only):** Mechanism has a time and a place. A brief mechanism line builds credibility when the reader values the how or when the mechanism is the differentiator. The test is length and audience, not presence: one interesting clause, not a paragraph of plumbing. Match the depth to how much the specific reader cares; when unsure, go shorter.
 
 ---
 
@@ -593,7 +593,7 @@ This is one of the most common machine-generated failures. The email states each
 
 **Do instead, set up each of the four moves with a short connective:**
 
-1. **Before the pitch, a reason-for-writing lead-in.** "To be upfront, I help..." / "Reaching out because I help..." / "Quick reason I'm writing:..." One short phrase, then the value line. (Cf. Legacy Email 9's "just wanted to be upfront.")
+1. **Before the pitch, a reason-for-writing lead-in.** "To be upfront, I help..." / "Reaching out because I help..." / "Quick reason I'm writing:..." One short phrase, then the value line.
 2. **Before the case study, attribute it to yourself.** The reader has to know the result was your work, not a name you admire. "I did this for [client] recently, they..." / "Recently worked with [client] and..." / "Got [client]..." Not the bare "[Client] got [result]."
 3. **Before the offer, introduce it as an offer.** "My offer: if we don't hit [X] in [Y], then [Z]." / "Here's the deal: ..." / "If we don't get [X], we keep working at no cost." Turn the bare outcome/guarantee into a sentence with a setup.
 
@@ -613,9 +613,9 @@ This is one of the most common machine-generated failures. The email states each
 
 **Why it fails:** "I saw your company on LinkedIn" by itself is empty. Everyone says it.
 
-**The nuance:** "I found you on LinkedIn and thought I'd reach out" actually works fine (see Legacy Emails 13, 14) but only when followed immediately by a strong, specific offer. The intro line isn't the hook; the offer is.
+**The nuance:** "I found you on LinkedIn and thought I'd reach out" can work, but only when followed immediately by a strong, specific offer. The intro line isn't the hook; the offer is.
 
-**Do instead:** Either pair the email with a real icebreaker (the manually-added Archetype A cold-read opener, Legacy Emails 2-4), or keep the intro generic but make the offer so specific it doesn't matter (Legacy Emails 7-11, 13, 14). Note: you never *generate* the `{{icebreaker}}` variable, the user adds it during review, so generated bodies must read naturally without one. "I found you on LinkedIn" + "I built a system that generates ~20 sales appointments per month" = works. "I found you on LinkedIn" + "I'd love to explore synergies" = trash.
+**Do instead:** Either pair the email with a real icebreaker (the manually-added Archetype A cold-read opener), or keep the intro generic but make the offer so specific it doesn't matter. Note: you never *generate* the `{{icebreaker}}` variable, the user adds it during review, so generated bodies must read naturally without one. "I found you on LinkedIn" + "I built a system that generates ~20 sales appointments per month" = works. "I found you on LinkedIn" + "I'd love to explore synergies" = trash.
 
 ---
 
@@ -631,7 +631,7 @@ This is one of the most common machine-generated failures. The email states each
 
 **Do instead:** Specific outcomes with numbers. "Just partnered with Vention & generated 85k rev in 12 wks" / "I helped 1SecondCopy get 124 appointments in just shy of 30 days"
 
-**On naming clients (a test variable, not a rule):** Whether to name a client or use a descriptor is something to test, not a fixed rule. Both can win depending on the list and offer. Recognizable names (NordVPN, SEMRush, Koho in Legacy Email 13) carry instant credibility. For unrecognizable names a descriptor often reads cleaner ("a ~2M/yr performance marketing firm," Legacy Email 8; "a very similar company, 5M/yr," Legacy Email 21), but naming the client can also add concreteness and has performed better in some campaigns, so don't treat naming as a mistake. Rotate named vs. descriptor across variants in a campaign and let reply data decide. **When you use a descriptor instead of the name, include the client's location at the state / region level** (a state or major metro reads more natural and less identifying than a small-town city name) along with size and niche: "a 5M/yr marketing agency in NYC," "an insulation contractor up in Michigan." If you don't know where they're based, look it up before writing the descriptor.
+**On naming clients (a test variable, not a rule):** Whether to name a client or use a descriptor is something to test, not a fixed rule. Both can win depending on the list and offer. Recognizable names carry instant credibility. For unrecognizable names, a descriptor often reads cleaner ("a ~2M/yr performance marketing firm," "a very similar company, 5M/yr"), but naming the client can also add concreteness and has performed better in some campaigns, so don't treat naming as a mistake. Rotate named vs. descriptor across variants in a campaign and let reply data decide. **When you use a descriptor instead of the name, include the client's location at the state / region level** (a state or major metro reads more natural and less identifying than a small-town city name) along with size and niche: "a 5M/yr marketing agency in NYC," "an insulation contractor up in Michigan." If you don't know where they're based, look it up before writing the descriptor.
 
 ---
 
@@ -644,7 +644,7 @@ This is one of the most common machine-generated failures. The email states each
 
 **Why it fails:** There's no reason to reply. No credibility, no curiosity, no value.
 
-**The nuance:** "Value" doesn't always mean a free insight or framework. A strong, specific offer IS value. Legacy Emails 7, 13, 14 don't provide standalone tips but they give enough specific proof and a clear enough offer that the prospect has a reason to engage. The point is: give them something to work with, whether that's an insight, a concrete offer, or a compelling proof point.
+**The nuance:** "Value" doesn't always mean a free insight or framework. A strong, specific offer is value. The point is: give them something to work with, whether that's an insight, a concrete offer, or a compelling proof point.
 
 ---
 
@@ -796,7 +796,7 @@ AI (and fluffy human copy) manufactures emphasis by pairing a positive with a ne
 
 **The tell:** delete the negated half and check if you lost any information. "Defend a SKU off the label, not off the marketing" → "defend a SKU off the label." Nothing concrete was lost; "not off the marketing" only existed to make the first half sound principled. That's the fluff signature.
 
-**The nuance (when it's legitimate):** a negation is fine when the negated half heads off a real objection or carries specific information the reader needs. Legacy Email 22's "Not because your content is bad (it's not, it rocks)" is genuine reassurance against a fear the diagnosis would otherwise trigger. The test: is the negated half answering a question the reader actually has, or is it a strawman propping up the positive? If it's a strawman, cut it.
+**The nuance (when it's legitimate):** a negation is fine when the negated half heads off a real objection or carries specific information the reader needs. The test: is the negated half answering a question the reader actually has, or is it a strawman propping up the positive? If it's a strawman, cut it.
 
 **Do instead:** State the positive directly and let it stand. "A nutritionist owner reads the back of the can before the front" carries the same point as "off the label, not off the marketing" without the contrastive crutch. If the contrast is genuine and specific, state both halves as plain facts; don't lean on the negation for rhythm.
 

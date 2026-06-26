@@ -2,7 +2,7 @@
 
 ## V2 Remaster Priority
 
-The current house standard starts from `examples/validated/`, not the archived legacy batches.
+The current house standard starts from `examples/validated/`.
 
 Default to a shorter, permission-based email when the offer, observed issue, insight, or lead magnet is strong enough to carry the copy.
 
@@ -122,7 +122,7 @@ There are only six offers in the world:
 - Raise status
 - Live longer
 
-**In B2B, focus on the first four.** "Raise status" can occasionally support a primary offer (e.g., "most of the top people are running something similar" in Legacy Email 10, or positioning your offer as something that makes the prospect look good to their clients in Legacy Email 4). But it should never be the lead angle. Use it sparingly and only when it's natural.
+**In B2B, focus on the first four.** "Raise status" can occasionally support a primary offer, for example when positioning your offer as something that makes the prospect look good to their clients. But it should never be the lead angle. Use it sparingly and only when it's natural.
 
 Every campaign should clearly align to one primary offer, not several at once.
 
@@ -178,7 +178,7 @@ Value-first emails build trust without needing an immediate reply.
 
 ## 5. Use a simple, proven cold email structure
 
-Match length to proof density. Under 100 words for simple offers or referral asks (Legacy Emails 7, 13). 150-250 words when every paragraph earns its place with specific proof, mechanism, or risk reversal (Legacy Emails 2, 4, 8, 10, 11). Most validated examples are 150+ words. Avoid vague corporate language.
+Match length to proof density. V2 defaults short. Use longer copy only when every paragraph earns its place with specific proof, mechanism, or risk reversal. Avoid vague corporate language.
 
 ### Basic framework:
 
@@ -251,9 +251,9 @@ If your CTA is:
 
 You can support the CTA with setup lines, as long as they point to the same action.
 
-**Two paths, same CTA:** Offering two ways to engage toward the same outcome is not a multiple-CTA violation. "Do you want me to go ahead and build it, or would you prefer to chat first?" gives the prospect control over *how* to engage, not *what* to engage with. Both paths lead to the same place. See Legacy Emails 2, 4, 13.
+**Two paths, same CTA:** Offering two ways to engage toward the same outcome is not a multiple-CTA violation. "Do you want me to go ahead and build it, or would you prefer to chat first?" gives the prospect control over *how* to engage, not *what* to engage with. Both paths lead to the same place.
 
-**A simple yes/no question can BE the CTA.** For give-first or no-cost-build offers, the lowest-friction ask is often a question the prospect answers in one word: "Want me to build a concept of your site at no cost?" (cf. Legacy Email 13's "Is {{shortCompany}} looking for writers?"). The yes is the micro-commitment; you book the call on the reply. This stays a single CTA, the question is the one action you want.
+**A simple yes/no question can BE the CTA.** For give-first or no-cost-build offers, the lowest-friction ask is often a question the prospect answers in one word: "Want me to build a concept of your site at no cost?" or "Is {{shortCompany}} looking for writers?" The yes is the micro-commitment; you book the call on the reply. This stays a single CTA, the question is the one action you want.
 
 ---
 
